@@ -1,0 +1,12 @@
+name: Caller Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call_dependent:
+    uses: <username>/<repo>/.github/workflows/dependent-workflow.yml@main
+    with:
+      message: "Hello from Caller Workflow!"
